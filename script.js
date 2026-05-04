@@ -2,6 +2,7 @@ const tempo= document.getElementById("tempo")
 
 let tempoTotal=1500 //tempo total em segundos
 let tempoInicial=1500
+let progresso=0
 let timer
 
 //ai ficar mostrando o tempo na página em minutos e segundos
@@ -11,11 +12,15 @@ function mostrarTempo(){
     tempo.innerHTML= minutos + ":"+segundos
 }
 
-//vai atualizando/diminuindo o tempo total 
+//vai atualizando/diminuindo o tempo total
+//atualiza progresso da barra 
 function atualizar(){
     if(tempoTotal>0){
         tempoTotal--
         mostrarTempo()
+        progresso=(tempoInicial-tempoTotal)/tempoInicial*100
+        const barraProgresso= document.getElementById("barra")
+        barraProgresso.style.width=progresso + "%"
     }
     else{
         pausar()
@@ -36,6 +41,10 @@ function zerar(){
     mostrarTempo()
     timer=null
 
+     const barraProgresso= document.getElementById("barra")
+     progresso=0
+    barraProgresso.style.width=progresso + "%"
+
 }
 
 //interrompe o contador
@@ -43,3 +52,4 @@ function pausar(){
     clearInterval(timer)
     timer=null
 }
+

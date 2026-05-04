@@ -18,11 +18,19 @@
 
         <div class="timer">
             <h1 id="tempo">00:00</h1>
+            </div>
+
+            <div class="progresso">
+                <div class="barra" id="barra">
+
+                </div>
+
+            </div>
         </div>
 
         <div class="botoes">  
-        <button type="button" onclick="iniciar()"> Iniciar </button>
-        <button type="button" onclick="pausar()" on>Pausar</button>
+        <button type="button" onclick="iniciar(); mostrarProgresso()" > Iniciar </button>
+        <button type="button" onclick="pausar()" >Pausar</button>
         <!-- <button type="button">Intervalo</button>-->
         <button type="button" onclick="zerar()">Zerar</button>
 
