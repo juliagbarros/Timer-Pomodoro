@@ -10,7 +10,10 @@
 
     <div class="topo">
         <h1>Pomodoro</h1>
+    </div>
 
+    <div class="mensagem">
+        <h1 id="mensagem"></h1>
     </div>
 
 
@@ -18,24 +21,18 @@
 
         <div class="timer">
             <h1 id="tempo">00:00</h1>
-            </div>
+            <audio id="audio" src="notificacaoAudio.mp3"> </audio>
+        </div>
 
             <div class="progresso">
                 <div class="barra" id="barra">
-
                 </div>
-
             </div>
-        </div>
 
         <div class="botoes">  
-        <button type="button" onclick="iniciar(); mostrarProgresso()" > Iniciar </button>
-        <button type="button" onclick="pausar()" >Pausar</button>
-        <!-- <button type="button">Intervalo</button>-->
-        <button type="button" onclick="zerar()">Zerar</button>
-
-
-
+            <button type="button" onclick="iniciar()" > Iniciar </button>
+            <button type="button" onclick="pausar()" >Pausar</button>
+            <button type="button" onclick="zerar()">Zerar</button>
         </div>
 
     </div>
